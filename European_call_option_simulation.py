@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from utilis import EuropeanCall, GeometricBrownianMotion, payoff_call
+from utilis import EuropeanOption, GeometricBrownianMotion, payoff_call
 
 
 if __name__ == '__main__':
@@ -34,6 +34,6 @@ if __name__ == '__main__':
     print('Price using Monte Carlo simulation: ', np.mean(call_payoffs))
 
     # Pricing using BS model
-    bs_price = EuropeanCall(initial_price, volatility, strike, T, risk_free_rate)
-    print('Price using Black Scholes Model: ', bs_price.price)
+    bs_price = EuropeanOption(initial_price, volatility, strike, T, risk_free_rate)
+    print('Price using Black Scholes Model: ', bs_price.price_call)
 
