@@ -135,6 +135,9 @@ if __name__ == '__main__':
 
     for price_path in price_paths:
         plt.plot(price_path)
+    plt.xlabel('t')
+    plt.ylabel('St')
+    plt.title('Simulation Paths')
     plt.show()
 
     # test pricing using BS model
