@@ -4,7 +4,6 @@ from utilis import EuropeanOption, GeometricBrownianMotion, payoff_call
 
 
 if __name__ == '__main__':
-    # my student ID: 2020212430, use last 3 numbers as strike price
     strike = 430
     risk_free_rate = .01
     initial_price = 400
@@ -36,8 +35,8 @@ if __name__ == '__main__':
     # plt.title('Price Path Simulation')
     # plt.show()
 
-    plt.plot([s for s in range(1000, 11000, 1000)], pricing_mean)
-    plt.title('Price with different simulation path number')
+    plt.plot([s for s in range(100, 1000, 10)], pricing_std)
+    plt.title('Price std with different step number')
     plt.xlabel('step number')
     plt.ylabel('price')
     plt.show()
